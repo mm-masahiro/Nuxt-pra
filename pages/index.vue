@@ -1,36 +1,21 @@
 <template>
   <div class="container">
-    <h1>Manage Your ToDo</h1>
-    <div>
-      <p>ここにリストを表示させる</p>
-    </div>
-    <!-- <div>
-      <Logo />
-      <h1 class="title">
-        nuxt-pra
-      </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+    <h1 class="container--header">Manage Your Task</h1>
+    <div class="container--body">
+      <div class="container--body__button">
+        <nuxt-link to="/addtodo">
+          <Button name="ToDoの追加" />
+        </nuxt-link>
+        <nuxt-link to="edittodo">
+          <Button name="ToDoの編集" />
+        </nuxt-link>
+        <nuxt-link to="deletetodo">
+          <Button name="ToDoの削除" />
+        </nuxt-link>
       </div>
+      <p>ここにリストを表示させる</p>
+      <List />
     </div>
-    <nuxt-link to="/fun">
-      Fun page
-    </nuxt-link> -->
   </div>
 </template>
 
@@ -45,6 +30,16 @@ export default {}
   text-align: center;
   display: flex;
   flex-direction: column;
+}
+
+.container--header {
+  padding: 20px;
+}
+
+.container--body__button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 /* .title {
