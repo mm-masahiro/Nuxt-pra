@@ -1,0 +1,69 @@
+{
+  "extends": ["@nuxtjs"],
+  "lockFileMaintenance": {
+    "enabled": true
+  },
+  "ignoreDeps": ["vue-jest"],
+  "postUpgradeTasks": {
+    "commands": ["ava --verbose --update-snapshots"],
+    "fileFilters": ["**/*.snap", "**/*.md"]
+  },
+  "packageRules": [
+    {
+      "packagePatterns": ["nuxt"],
+      "groupName": "nuxt packages"
+    },
+    {
+      "packagePatterns": ["adonisjs"],
+      "groupName": "adonisjs packages"
+    },
+    {
+      "packagePatterns": ["ant-design"],
+      "groupName": "ant design packages"
+    },
+    {
+      "packagePatterns": ["ava"],
+      "groupName": "ava packages"
+    },
+    {
+      "packagePatterns": ["balm-ui"],
+      "groupName": "balm-ui packages"
+    },
+    {
+      "packagePatterns": ["bootstrap"],
+      "groupName": "bootstrap packages"
+    },
+    {
+      "packagePatterns": ["element-ui"],
+      "groupName": "element-ui packages"
+    },
+    {
+      "packagePatterns": ["feathersjs"],
+      "groupName": "feathersjs packages"
+    },
+    {
+      "packagePatterns": ["jest"],
+      "groupName": "jest packages"
+    },
+    {
+      "packagePatterns": ["ava", "require-extension-hooks"],
+      "groupName": "ava packages"
+    },
+    {
+      "packagePatterns": ["wdio", "webdriver"],
+      "groupName": "webdriverio packages"
+    },
+    {
+      "packagePatterns": ["oruga"],
+      "groupName": "oruga packages"
+    },
+    {
+      "packagePatterns": ["nightwatch", "chromedriver"],
+      "groupName": "nightwatch packages"
+    },
+    {
+      "packagePatterns": ["boxicons", "vuesax"],
+      "groupName": "vuesax packages"
+    }
+  ]
+}
