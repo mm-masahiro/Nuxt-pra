@@ -1,6 +1,10 @@
 <template>
   <div class="container">
+    <h1>Manage Your ToDo</h1>
     <div>
+      <p>ここにリストを表示させる</p>
+    </div>
+    <!-- <div>
       <Logo />
       <h1 class="title">
         nuxt-pra
@@ -24,6 +28,9 @@
         </a>
       </div>
     </div>
+    <nuxt-link to="/fun">
+      Fun page
+    </nuxt-link> -->
   </div>
 </template>
 
@@ -35,13 +42,12 @@ export default {}
 .container {
   margin: 0 auto;
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
-.title {
+/* .title {
   font-family:
     'Quicksand',
     'Source Sans Pro',
@@ -69,5 +75,5 @@ export default {}
 
 .links {
   padding-top: 15px;
-}
+} */
 </style>
