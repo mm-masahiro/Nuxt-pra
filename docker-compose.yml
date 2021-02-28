@@ -1,0 +1,14 @@
+version: '3'
+services:
+ nuxt.js:
+  container_name: nuxt.js
+  build:
+   context: ./docker/nuxt.js
+   dockerfile: Dockerfile
+  image: nuxt_app_image
+  volumes:
+   - ./docker/nuxt.js/src:/src:cached
+   - /src/app/node_modules
+  ports:
+   - 8090:38090
+  tty: true
