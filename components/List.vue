@@ -4,7 +4,7 @@
       v-forでまわす
       <li class="list--top__content">{{ title }}</li>
     </ul> -->
-    <ListItem v-for="todo in todos" :key="todo.id">{{ todo }}</ListItem>
+    <ListItem v-for="todo in todos" :key="todo.id">{{ todo.id }}. Title{{ todo.title }}</ListItem>
     <div>{{ count }}</div>
     <button @click="counter">Add</button>
   </div>
