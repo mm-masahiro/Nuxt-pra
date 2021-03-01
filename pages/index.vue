@@ -14,6 +14,7 @@
         </nuxt-link>
       </div>
       <p>ここにリストを表示させる</p>
+      <Form @addedTodo="newTodo" />
       <List :todos="todos" />
     </div>
   </div>
@@ -40,7 +41,9 @@ export default {
     }
   },
   methods: {
-
+    newTodo(todo) {
+      this.todos.push(todo);
+    }
   }
 }
 </script>
