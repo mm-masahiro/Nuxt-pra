@@ -1,12 +1,6 @@
 <template>
   <div class="list">
-    <!-- <ul class="list--top">
-      v-forでまわす
-      <li class="list--top__content">{{ title }}</li>
-    </ul> -->
-    <ListItem v-for="todo in todos" :key="todo.id">{{ todo.id }}. Title{{ todo.title }}</ListItem>
-    <div>{{ count }}</div>
-    <button @click="counter">Add</button>
+    <ListItem v-for="todo in todos" :key="todo">{{ todo }}</ListItem>
   </div>
 </template>
 
@@ -18,13 +12,11 @@ export default {
   },
   data() {
     return {
-      count: 10
+
     }
   },
   methods: {
-    counter() {
-      this.count += 1
-    }
+
   }
 }
 </script>

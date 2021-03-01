@@ -14,6 +14,7 @@
         </nuxt-link>
       </div>
       <p>ここにリストを表示させる</p>
+      <Form @addedTodo="newTodo" />
       <List :todos="todos" />
     </div>
   </div>
@@ -24,23 +25,28 @@ export default {
   data() {
     return {
       todos: [
-        {
-          id: 1,
-          title: "Task1"
-        },
-        {
-          id: 2,
-          title: "Task2"
-        },
-        {
-          id: 3,
-          title: "Task3"
-        },
+        // {
+        //   id: 1,
+        //   title: "Task1"
+        // },
+        // {
+        //   id: 2,
+        //   title: "Task2"
+        // },
+        // {
+        //   id: 3,
+        //   title: "Task3"
+        // },
+        'task1'
       ]
     }
   },
   methods: {
-
+    newTodo(todo) {
+      this.todos.push(todo);
+      console.log(todo)
+      console.log(this.todos)
+    }
   }
 }
 </script>
