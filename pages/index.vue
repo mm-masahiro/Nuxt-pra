@@ -14,13 +14,35 @@
         </nuxt-link>
       </div>
       <p>ここにリストを表示させる</p>
-      <List />
+      <List :todos="todos" />
     </div>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      todos: [
+        {
+          id: 1,
+          title: "Task1"
+        },
+        {
+          id: 2,
+          title: "Task2"
+        },
+        {
+          id: 3,
+          title: "Task3"
+        },
+      ]
+    }
+  },
+  methods: {
+
+  }
+}
 </script>
 
 <style>
