@@ -17,7 +17,7 @@ export default {
   },
   methods: {
     addTodo() {
-      this.$emit('addedTodo', this.todo.title);
+      this.$emit('addedTodo', this.todo);
       this.todo = '';
     }
   }
